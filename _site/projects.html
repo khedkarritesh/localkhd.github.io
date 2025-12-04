@@ -1,0 +1,191 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optimal Inspirations</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="./css/sidebars.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+<style>
+    body {
+        font-family: Helvetica, sans-serif;
+    }
+
+    .nav-item {
+        padding-left: 10%;
+    }
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .navbar-brand {
+        color: #000000;
+    }
+
+    .carousel-item img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* You might also want to set a specific width for the image */
+        max-height: 50%;
+    }
+
+    .carousel-caption-posinit {
+        position: initial;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        background-color: #3d3030b3;
+    }
+
+    .carousel-caption {
+        color: black;
+    }
+</style>
+    <script src="./js/items.js"></script>
+    <script src="./js/display.js"></script>
+</head>
+
+
+<body class="p-0 m-0 border-0 bd-example m-0 border-0">
+    <!-- Start - Nav Bar -->
+<div>
+    <nav class="navbar navbar-expand-lg" style="border-bottom: 5px solid #FFDF00;font-family: 'montserrat';"
+        data-bs-theme="light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">OPTIMAL INSPIRATIONS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left:5%">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./projects.html">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tutorials.html">tutorials</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            FAVORITES
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./fav_creations.html">CREATIONS</a></li>
+                            <li><a class="dropdown-item" href="./fav_worksetups.html">Work Setups</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./fav_other.html">Other</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">BLOG</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">SEARCH</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- End - Nav Bar -->
+    <div class="container" style="margin-top:10px;">
+        <div class="row" style="flex-direction: row; flex-wrap: nowrap;">
+            <!-- Start - Left Nav Area -->
+            <div class="col-3" style="border-right: solid 2px #FFDF00;min-width:10em;max-width:12em;">
+                <!-- Start - Supplies Nav Bar -->
+                <div class="flex-shrink-0 p-3 bg-white" style="">
+                    <!--
+          <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+            <svg class="bi me-2" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-5 fw-semibold">Collapsible</span>
+          </a>
+          -->
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                                Cards
+                            </button>
+                            <div class=" collapse show" id="home-collapse" style="">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a id="defaultfocus" href="#cards_birthday"
+                                            class="link-dark rounded">Birthday</a>
+                                    </li>
+                                    <li><a href="#cards_seasonal" class="link-dark rounded">Seasonal</a></li>
+                                    <li><a href="#cards_other" class="link-dark rounded">Other</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                                Decor
+                            </button>
+                            <div class="collapse" id="dashboard-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">Door</a></li>
+                                    <li><a href="#" class="link-dark rounded">Table</a></li>
+                                    <li><a href="#" class="link-dark rounded">Wall</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+                                data-bs-target="#orders-collapse" aria-expanded="false">
+                                Utility
+                            </button>
+                            <div class="collapse" id="orders-collapse" style="">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">Card Holders</a></li>
+                                    <li><a href="#" class="link-dark rounded">Calendars</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+                                data-bs-target="#orders-collapse" aria-expanded="false">
+                                Deals
+                            </button>
+                            <div class="collapse" id="orders-collapse" style="">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">Bundles</a></li>
+                                    <li><a href="#" class="link-dark rounded">On Sale</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End - Supplies Nav Bar -->
+            </div>
+            <!-- End - Left Nav Area -->
+            <div class="col-9">
+                <!-- Start - Content Area -->
+                <div id="cr1" class="container"
+                    style="margin-top:20px;font-family='Helvetica Neue', 'Helvetica', 'sans-serif';font-size:0.8em">
+
+                </div>
+                <!-- End - Content Area -->
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,96 @@
+---
+---
+{% include doctype.html %}
+
+<head>
+    {% include commonheader.html %}
+    <script src="./js/items.js"></script>
+    <script src="./js/display.js"></script>
+</head>
+
+
+<body {% include bodyattributes.html %}>
+    {% include navbar.html %}
+    <div class="container" style="margin-top:10px;">
+        <div class="row" style="flex-direction: row; flex-wrap: nowrap;">
+            <!-- Start - Left Nav Area -->
+            <div class="col-3" style="border-right: solid 2px #FFDF00;min-width:10em;max-width:12em;">
+                <!-- Start - Supplies Nav Bar -->
+                <div class="flex-shrink-0 p-3 bg-white" style="">
+                    <!--
+          <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+            <svg class="bi me-2" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-5 fw-semibold">Collapsible</span>
+          </a>
+          -->
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                                Cards
+                            </button>
+                            <div class=" collapse show" id="home-collapse" style="">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a id="defaultfocus" href="#cards_birthday"
+                                            class="link-dark rounded">Birthday</a>
+                                    </li>
+                                    <li><a href="#cards_seasonal" class="link-dark rounded">Seasonal</a></li>
+                                    <li><a href="#cards_other" class="link-dark rounded">Other</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                                Decor
+                            </button>
+                            <div class="collapse" id="dashboard-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">Door</a></li>
+                                    <li><a href="#" class="link-dark rounded">Table</a></li>
+                                    <li><a href="#" class="link-dark rounded">Wall</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+                                data-bs-target="#orders-collapse" aria-expanded="false">
+                                Utility
+                            </button>
+                            <div class="collapse" id="orders-collapse" style="">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">Card Holders</a></li>
+                                    <li><a href="#" class="link-dark rounded">Calendars</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+                                data-bs-target="#orders-collapse" aria-expanded="false">
+                                Deals
+                            </button>
+                            <div class="collapse" id="orders-collapse" style="">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">Bundles</a></li>
+                                    <li><a href="#" class="link-dark rounded">On Sale</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End - Supplies Nav Bar -->
+            </div>
+            <!-- End - Left Nav Area -->
+            <div class="col-9">
+                <!-- Start - Content Area -->
+                <div id="cr1" class="container"
+                    style="margin-top:20px;font-family='Helvetica Neue', 'Helvetica', 'sans-serif';font-size:0.8em">
+
+                </div>
+                <!-- End - Content Area -->
+            </div>
+        </div>
+    </div>
+</body>
